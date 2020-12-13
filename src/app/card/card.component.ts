@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {}
 
-  orderNow() {
-    this.buttonClicked.emit();
+  orderNow(title) {
+    this.buttonClicked.emit(title);
   }
 }

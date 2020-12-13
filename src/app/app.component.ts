@@ -72,6 +72,6 @@ export class AppComponent {
   ];
 
   displayStatus(data) {
-    alert("Your order is successfully placed..");
+    alert("Your order is successfully placed for  " + data);
   }
 }

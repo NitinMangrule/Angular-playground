@@ -3,6 +3,7 @@
 	<ng-container *ngFor="let dish of dishData">
 		<!-- {{dish.title}} -->
 		<Card [title]="dish.title" [path]="dish.imgPath" [desc]="dish.description"
-			(buttonClicked)="displayStatus($event)"></Card>
+			(buttonClicked)="displayStatus($event)">
+		</Card>
 	</ng-container>
 </div>
