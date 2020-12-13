@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { CardComponent } from "./card/card.component";
 import { TestComponent } from "./test/test.component";
 import { HighlightDirective } from "../highlight.directive";
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -13,7 +14,8 @@ import { HighlightDirective } from "../highlight.directive";
     AppComponent,
     CardComponent,
     TestComponent,
-    HighlightDirective
+    HighlightDirective,
+    UnlessDirective
   ],
   bootstrap: [AppComponent]
 })

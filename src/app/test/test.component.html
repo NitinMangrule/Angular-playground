@@ -1,5 +1,5 @@
-<p>
+<p *appUnless="flag">
 	test works! {{data}}
 </p>
 <input type="text" [(ngModel)]="data">
-<button (click)="handle(data)" [appHighlight]="'red'" [defaultColor]="'pink'">Click</button>
+<button (click)="handle(data);flag=!flag;" [appHighlight]="'red'" [defaultColor]="'pink'">Click</button>
