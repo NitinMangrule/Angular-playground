@@ -1,7 +1,6 @@
 <h1>Delicious Dishes </h1>
 <div class="parent">
 	<ng-container *ngFor="let dish of dishData">
-		<!-- {{dish.title}} -->
 		<Card [title]="dish.title" [path]="dish.imgPath" [desc]="dish.description"
 			(buttonClicked)="displayStatus($event)">
 		</Card>
