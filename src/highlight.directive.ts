@@ -3,6 +3,7 @@ import {
   ElementRef,
   HostBinding,
   HostListener,
+  Input,
   Renderer2
 } from "@angular/core";
 
@@ -10,11 +11,14 @@ import {
   selector: "[appHighlight]"
 })
 export class HighlightDirective {
-  @HostBinding("style.backgroundColor") backgroundColor: string ='transparent';
+  @Input() defaultColor = "transperent";
+  @Input("appHighlight") updatedColor = "blue";
+  @HostBinding("style.backgroundColor") backgroundColor: string;
   constructor(private elRef: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     //  this.elementRef.nativeElement.style.backgroundColor = "blue";
+    this.backgroundColor = this.defaultColor;
     this.renderer.setStyle(
       this.elRef.nativeElement,
       "background-color",
@@ -35,10 +39,10 @@ export class HighlightDirective {
   // }
 
   @HostListener("mouseenter") mouseEnter() {
-    this.backgroundColor = "red";
+    this.backgroundColor = this.updatedColor;
   }
 
   @HostListener("mouseleave") mouseLeave() {
-    this.backgroundColor = "yellow";
+    this.backgroundColor = this.defaultColor;
   }
 }
