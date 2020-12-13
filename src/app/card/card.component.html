@@ -1,15 +1,14 @@
 <div class="main">
 	<div class="header">
-		<h4>Burger</h4>
+		<h4>{{title}}</h4>
 	</div>
 	<div class="body">
 		<div class="photo-section">
-			<img class="photo" src="https://foodish-api.herokuapp.com/images/burger/burger56.jpg" alt="photo">
+			<img class="photo" [src]="path" alt="photo">
     </div>
 			<div class="content">
-				<p class="intro">The Best Burger Recipe! Sharing our secrets for making restaurant quality burgers, from
-					the juiciest burger patties to the best buns and burger </p>
-				<button class="btn">Select</button>
+				<p class="intro">{{desc}}</p>
+				<button class="btn">Order Now</button>
 			</div>
 		</div>
 	</div>

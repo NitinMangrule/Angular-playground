@@ -1,11 +1,7 @@
 <h1>Delicious Dishes</h1>
 <div class="parent">
-	<Card></Card>
-	<Card></Card>
-	<Card></Card>
-	<Card></Card>
-	<Card></Card>
-	<Card></Card>
-	<Card></Card>
-	<Card></Card>
+	<ng-container *ngFor="let dish of dishData">
+		<!-- {{dish.title}} -->
+		<Card [title]="dish.title" [path]="dish.imgPath" [desc]="dish.description"></Card>
+	</ng-container>
 </div>
