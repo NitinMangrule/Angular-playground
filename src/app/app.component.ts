@@ -40,4 +40,8 @@ export class AppComponent {
         "The Best Burger Recipe! Sharing our secrets for making restaurant quality burgers, from the juiciest burger patties to the best buns and burger"
     }
   ];
+
+  displayStatus(data) {
+    alert("Your order is successfully placed..");
+  }
 }
